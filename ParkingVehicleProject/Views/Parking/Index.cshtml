@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+}
+
+@model IEnumerable<ParkingVehicleProject.Models.AllocatedParking>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parking Allocation System</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="~/parking.js"></script>
+</head>
+<body>
+    <div id="parking-allocation">
+        <h1>Parking Allocation System</h1>
+        <input type="text" id="car-plate-number" placeholder="Enter Car Plate Number">
+        <button onclick="allocateParking()">Allocate Parking</button>
+        <div id="allocation-result"></div>
+    </div>
+    <div id="parking-records">
+        <h1>Allocated Parkings</h1>
+        <div id="records">
+            @foreach (var item in Model)
+            {
+                <div>
+                    Car: @item.CarPlateNumber, Parking: @item.ParkingNumber, Start: @item.StartDateTime, End: @item.EndDateTime, Amount: @item.TotalAmount
+                </div>
+            }
+        </div>
+        <button onclick="loadMore()">Load More</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿{
+  "AllocatedParkings": [],
+  "ParkingSlots": [
+    {
+      "ParkingNumber": 1,
+      "IsAllocated": true
+    },
+    {
+      "ParkingNumber": 2,
+      "IsAllocated": false
+    },
+    {
+      "ParkingNumber": 3,
+      "IsAllocated": false
+    }
+  ]
+}
